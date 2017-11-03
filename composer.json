@@ -1,0 +1,17 @@
+{
+  "name": "cultuurnet/data-validation-client",
+  "description": "Data validation client",
+  "type": "library",
+  "license": "Apache-2.0",
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "CultuurNet\\DataValidationClient\\": "src"
+    }
+  },
+  "require": {
+    "guzzle/guzzle": "~3.9",
+    "symfony/http-foundation": "~2.3",
+    "symfony/validator": "~2.3",
+  }
+}
