@@ -9,8 +9,8 @@
     }
   },
   "require": {
-    "guzzle/guzzle": "3.9.2",
-    "symfony/validator": "~2.3"
+    "guzzle/guzzle": "*",
+    "symfony/http-foundation": "*"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
