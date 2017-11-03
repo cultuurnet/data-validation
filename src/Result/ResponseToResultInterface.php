@@ -1,6 +1,6 @@
 <?php
 
-namespace CultuurNet\UiTPASBeheer\DataValidation\Result;
+namespace CultuurNet\DataValidation\Result;
 
 use Guzzle\Http\Message\Response;
 

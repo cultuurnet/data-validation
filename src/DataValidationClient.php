@@ -1,9 +1,9 @@
 <?php
 
-namespace CultuurNet\UiTPASBeheer\DataValidation;
+namespace CultuurNet\DataValidation;
 
-use CultuurNet\UiTPASBeheer\DataValidation\Item\EmailValidationResult;
-use CultuurNet\UiTPASBeheer\DataValidation\Result\GetEmailValidationResult;
+use CultuurNet\DataValidation\Item\EmailValidationResult;
+use CultuurNet\DataValidation\Result\GetEmailValidationResult;
 use Guzzle\Http\ClientInterface;
 use Guzzle\Http\EntityBodyInterface;
 use Guzzle\Http\Message\RequestInterface;

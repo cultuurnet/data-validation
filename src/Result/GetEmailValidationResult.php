@@ -1,8 +1,8 @@
 <?php
 
-namespace CultuurNet\UiTPASBeheer\DataValidation\Result;
+namespace CultuurNet\DataValidation\Result;
 
-use CultuurNet\UiTPASBeheer\DataValidation\Item\EmailValidationResult;
+use CultuurNet\DataValidation\Item\EmailValidationResult;
 use Guzzle\Http\Message\Response;
 
 /**

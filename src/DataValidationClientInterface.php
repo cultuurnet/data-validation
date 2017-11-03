@@ -1,8 +1,8 @@
 <?php
 
-namespace CultuurNet\UiTPASBeheer\DataValidation;
+namespace CultuurNet\DataValidation;
 
-use CultuurNet\UiTPASBeheer\DataValidation\Item\EmailValidationResult;
+use CultuurNet\DataValidation\Item\EmailValidationResult;
 
 /**
  * Defines the data validation client.

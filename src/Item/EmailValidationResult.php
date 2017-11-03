@@ -1,6 +1,6 @@
 <?php
 
-namespace CultuurNet\UiTPASBeheer\DataValidation\Item;
+namespace CultuurNet\DataValidation\Item;
 
 /**
  * Class EmailValidationResult
