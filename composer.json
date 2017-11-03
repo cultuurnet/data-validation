@@ -9,7 +9,7 @@
     }
   },
   "require": {
-    "guzzle/guzzle": "~3.9",
+    "guzzle/guzzle": "3.9.2",
     "symfony/http-foundation": "~2.3",
     "symfony/validator": "~2.3"
   },
