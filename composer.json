@@ -1,6 +1,6 @@
 {
-  "name": "cultuurnet/data-validation-client",
-  "description": "Data validation client",
+  "name": "cultuurnet/data-validation",
+  "description": "Data validation",
   "type": "library",
   "license": "Apache-2.0",
   "autoload": {
