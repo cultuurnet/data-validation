@@ -6,7 +6,10 @@
   "autoload": {
     "psr-4": {
       "CultuurNet\\DataValidation\\": "src"
-    }
+    },
+    "classmap": [
+      "src/"
+    ]
   },
   "require": {
     "guzzle/guzzle": "*",
