@@ -2,7 +2,6 @@
 
 namespace CultuurNet\DataValidation;
 
-use CultuurNet\DataValidation\Item\EmailValidationResult;
 use CultuurNet\DataValidation\Result\GetEmailValidationResult;
 use Guzzle\Http\ClientInterface;
 use Guzzle\Http\EntityBodyInterface;
@@ -12,6 +11,11 @@ use Symfony\Component\HttpFoundation\ParameterBag;
 
 class DataValidationClient implements DataValidationClientInterface
 {
+    /**
+     * @var string
+     */
+    private $baseUrl = 'https://dv3.datavalidation.com/api/v2/';
+
     /**
      * @var ClientInterface
      */
@@ -35,6 +39,8 @@ class DataValidationClient implements DataValidationClientInterface
     public function __construct(ClientInterface $guzzleClient, $apiKey)
     {
         $this->guzzleClient = $guzzleClient;
+        $this->guzzleClient->setBaseUrl($this->baseUrl);
+
         $this->apiKey = $apiKey;
     }
 
