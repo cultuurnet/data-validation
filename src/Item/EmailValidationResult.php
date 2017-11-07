@@ -2,14 +2,14 @@
 
 namespace CultuurNet\DataValidation\Item;
 
+use CultuurNet\DataValidation\RealtimeValidationStatus;
+
 /**
  * Class EmailValidationResult
  * Contains the real-time email validation result.
  */
 class EmailValidationResult implements \JsonSerializable
 {
-    const REALTIME_VALIDATION_RESULT_STATUS_OK = 'ok';
-    const REALTIME_VALIDATION_RESULT_STATUS_ERROR = 'error';
 
     /**
      * @var string
@@ -37,7 +37,7 @@ class EmailValidationResult implements \JsonSerializable
      */
     public function isOK()
     {
-        return $this->getStatus() === self::REALTIME_VALIDATION_RESULT_STATUS_OK;
+        return $this->getStatus() === RealtimeValidationStatus::OK;
     }
 
     /**

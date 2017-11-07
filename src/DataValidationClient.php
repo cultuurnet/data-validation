@@ -2,7 +2,9 @@
 
 namespace CultuurNet\DataValidation;
 
+use CultuurNet\DataValidation\RealtimeValidationStatus;
 use CultuurNet\DataValidation\Result\GetEmailValidationResult;
+use CultuurNet\DataValidation\Item\EmailValidationResult;
 use Guzzle\Http\ClientInterface;
 use Guzzle\Http\EntityBodyInterface;
 use Guzzle\Http\Message\RequestInterface;
@@ -107,6 +109,15 @@ class DataValidationClient implements DataValidationClientInterface
      */
     public function validateEmail($email)
     {
-        return GetEmailValidationResult::parseToResult($this->request(RequestInterface::GET, 'realtime/', new ParameterBag(['email' => $email])));
+        try {
+            $response = $this->request(RequestInterface::GET, 'realtime/', new ParameterBag(['email' => $email]));
+            return GetEmailValidationResult::parseToResult($response);
+        }
+        catch (\Exception $e) {
+            // Since there is no data to parse, return an error validation result.
+            $emailValidationResult =  new EmailValidationResult();
+            $emailValidationResult->setStatus(RealtimeValidationStatus::ERROR);
+            return $emailValidationResult;
+        }
     }
 }
